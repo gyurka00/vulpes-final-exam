@@ -13,3 +13,4 @@ function wrietObjectToFile(filename, object, callback) {
     });
   }
 }
+module.exports = wrietObjectToFile;
