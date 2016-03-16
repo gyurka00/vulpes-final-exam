@@ -5,7 +5,8 @@ var fs = require('fs');
 function wrietObjectToFile(filename, object, callback) {
   setTimeout(write, 2000);
   function write(filename, object, callback) {
-    fs.writeFile(filename, json(object), function (err) {
+    var json_data = JSON.stringify(object);
+    fs.writeFile(filename, json_data, function (err) {
       if (err) {
         return console.log(err);
       }
@@ -13,4 +14,6 @@ function wrietObjectToFile(filename, object, callback) {
     });
   }
 }
+
+
 module.exports = wrietObjectToFile;
